@@ -11,3 +11,8 @@ Dependencias:
 2º - Storybook
 3º - Styled-components
 4º - react-icons
+5º - npm install --save-dev chromatic
+6º - 
+
+
+# CONFIGURAR GITHUB
