@@ -19,12 +19,5 @@ module.exports = {
   },
   "staticDirs": [
     "../public"
-  ],
-  viteFinal: (config, { configType }) => {
-    if (configType === 'PRODUCTION') {
-      config.base = '/react-storybook-main/'
-    }
-
-    return config
-  }
+  ]
 }
