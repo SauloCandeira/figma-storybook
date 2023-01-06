@@ -7,13 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-
-
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages",
-    "test-storybook": "test-storybook"
-
+    "deploy-storybook": "storybook-to-ghpages"
+    
 
   },
   "dependencies": {
@@ -38,6 +34,7 @@
     "@storybook/addon-links": "^6.5.12",
     "@storybook/builder-vite": "^0.2.3",
     "@storybook/react": "^6.5.12",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
@@ -56,8 +53,5 @@
   },
   "msw": {
     "workerDirectory": "public"
-  },
-  "readme": "ERROR: No README data found!",
-  "_id": "web@0.0.0",
-  "homepage": "http://https://saulocandeira.github.io/figma-storybook"
+  }
 }
