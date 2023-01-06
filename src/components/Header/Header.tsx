@@ -3,15 +3,18 @@ import { Container } from './styles'
 import { FaBars } from 'react-icons/fa'
 import Sidebar from '../Sidebar/sidebar'
 
-const Header = () => {
-  const [sidebar, setSidebar] = useState(false)
+// const Header = () => {
+export function Header() {
+const [sidebar, setSidebar] = useState(true)
 
   const showSiderbar = () => setSidebar(!sidebar)
 
   return (
     <Container>
-      <FaBars onClick={showSiderbar} />
-      {sidebar && <Sidebar active={setSidebar} />}
+
+      <Sidebar active={setSidebar} />
+      {/* <FaBars onClick={showSiderbar} />
+      {sidebar && <Sidebar active={setSidebar} />} */}
     </Container>
   )
 }

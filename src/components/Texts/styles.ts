@@ -1,11 +1,15 @@
 import styled from 'styled-components';
-import { AppFontSize } from '../../styles/global';
+import { AppFontSize, AppFontStyle } from '../../styles/global';
 
 type ContainerProps = {
     fontSize: string,
+    // fontWeight: string
 }
 
 export const variantSizeFont = { 
+    textCustom: {
+        fontSize: '66%'
+    },
     textSmall: {
         fontSize: AppFontSize.textSmall
     },
@@ -27,7 +31,20 @@ export const variantSizeFont = {
 }
 
 
-export const Container = styled.button<ContainerProps>`
+// export const variantStyleFont = { 
+//     textRegular: {
+//         fontWeight: AppFontStyle.textRegular
+//     },
+//     textBold: {
+//         fontWeight: AppFontStyle.textBold
+//     }
+// }
+
+
+export const Container = styled.div<ContainerProps>`
     font-size: ${props => props.fontSize};
+    /* font-weight: ${props => props.fontWeight}; */
+    border: 0;
+    /* position: relative; */
 `;
 

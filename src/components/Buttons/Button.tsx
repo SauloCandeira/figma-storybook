@@ -1,14 +1,20 @@
-import { Container, variantToColor } from "./styles";
+import { Container, variantToColor, variantToSize } from "./styles";
 
 
 export type ButtonProps = {
     children: string;
-    variant: 'primary' | 'secondary' | 'outline';
+    size: 'p' | 'm' | 'g';
+    variant: 'primary' | 'secondary' | 'outline' | 'quaternary' | 'tertiary';
+
 }
 
-export function Button({ children, variant }: ButtonProps) {
+export function Button({ size, children, variant, }: ButtonProps) {
 
+        
+    const {height, width} = variantToSize[size];
     const {bgColor, borderColor,color, hover} = variantToColor[variant];
+
+   
     return (
         // <button className="py-3 px-2 bg-orange-50 rounded font-semibold text-white text-sm w-full transition-colors">
         //     {children}
@@ -20,6 +26,8 @@ export function Button({ children, variant }: ButtonProps) {
             borderColor={borderColor}
             hoverBgColor={hover.bgColor}
             hoverColor={hover.color}
+            width={width}
+            height={height}
         >
             {children}
         </Container>

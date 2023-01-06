@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Container, Content } from './styles'
 import { 
   FaTimes, 
@@ -20,9 +20,11 @@ const Sidebar = ({ active }) => {
     active(false)
   }
 
+  const [sidebar, setSidebar] = useState(true)
+
   return (
-    <Container sidebar={active}>
-      <FaTimes onClick={closeSidebar} />  
+    <Container sidebar={setSidebar}>
+      {/* <FaTimes onClick={closeSidebar} />   */}
       <Content>
         <SidebarItem Icon={FaHome} Text="Dashboard" />
         <SidebarItem Icon={FaChartBar} Text="Equipe externa" />

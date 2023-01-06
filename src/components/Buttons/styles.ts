@@ -6,17 +6,35 @@ type ContainerProps = {
     color: string,
     borderColor: string,
     hoverBgColor: string,
-    hoverColor: string
+    hoverColor: string,
+    height: string,
+    width: string
+}
+
+export const variantToSize = { 
+    p: {
+        width: '65px',
+        height:'26px'
+    },
+    m: {
+        width: '97px',
+        height:'29px'
+    },
+    g: {
+        width: '120px',
+        height: '36px'
+    }
+
 }
 
 export const variantToColor = { 
     primary: {
         bgColor: AppColors.primary,
         borderColor: AppColors.primary,
-        color: AppColors.dark,
+        color: AppColors.white,
         hover: {
-            bgColor: AppColors.primaryHover,
-            color: AppColors.primaryHover
+            bgColor: AppColors.secondary,
+            color: AppColors.white
         }
 
     },
@@ -35,27 +53,49 @@ export const variantToColor = {
         color: AppColors.primary,
         hover: {
             bgColor: AppColors.primary,
-            color: AppColors.primary,
+            color: AppColors.white,
+        }
+    },
+    quaternary: {
+        bgColor: AppColors.blue,
+        borderColor: AppColors.blue,
+        color: AppColors.white,
+        hover: {
+            bgColor: AppColors.blue,
+            color: AppColors.white,
+        }
+    },
+    tertiary: {
+        bgColor: 'transparent',
+        borderColor: AppColors.blue,
+        color: AppColors.blue,
+        hover: {
+            bgColor: AppColors.blue,
+            color: AppColors.white,
         }
     }
+
 }
 
 
+
+
 export const Container = styled.button<ContainerProps>`
-    width: 100%;
-    max-width: 180px;
-    height: 48px;
+    /* width: 100%; */
+    width: ${props => props.width};
+    height: ${props => props.height};
     background-color: ${props => props.bgColor};
     border: 1px solid ${props => props.borderColor};
     color: ${props => props.color};
     font-size: 16px;
     cursos: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    margin: 0 5px;
 
-    &:hover{
-        background-color: ${props => props.hoverbgColor};
-        border: 1x solid ${props => props.hoverbgColor}
+    &:hover {
+        background-color: ${props => props.hoverBgColor};
+        border: 1x solid ${props => props.hoverColor};
         color: ${props => props.hoverColor};
-    }
+    } 
 `;
 

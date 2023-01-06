@@ -9,12 +9,38 @@ export default {
             defaultValue: 'textSmall',
             control: {
                 type: 'select',
-                values: ['textSmall', 'textMedium', 'textLarge', 'headingSmall', 'headingMedium', 'headingLarge']
+                values: ['textSmall', 'textMedium', 'textLarge', 'headingSmall', 'headingMedium', 'headingLarge'],
             }
         }
     }
 } as ComponentMeta<typeof Text>
 
+
+// export const textRegular: Story<TextProps> = (args) => (
+//     <Text {... args}> Text small </Text>
+// )
+
+// textRegular.args = {
+//     style: 'textRegular'
+// }
+
+// export const textBold: Story<TextProps> = (args) => (
+//     <Text {... args}> Text small </Text>
+// )
+
+// textBold.args = {
+//     style: 'textBold'
+// }
+
+
+
+export const textCustom: Story<TextProps> = (args) => (
+    <Text {... args}> Text Custom </Text>
+)
+
+textCustom.args = {
+    size: 'textCustom'
+}
 
 export const textSmall: Story<TextProps> = (args) => (
     <Text {... args}> Text small </Text>
