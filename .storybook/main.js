@@ -19,5 +19,12 @@ module.exports = {
   },
   "staticDirs": [
     "../public"
-  ]
+  ],
+  viteFinal: (config, { configType }) => {
+    if (configType === 'PRODUCTION') {
+      config.base = '/figma-storybook/'
+    }
+
+    return config
+  }
 }
